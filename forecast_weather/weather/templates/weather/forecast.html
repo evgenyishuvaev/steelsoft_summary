@@ -1,0 +1,52 @@
+{% extends 'weather/basic.html' %}
+
+{% block content %}
+    <div class="moscow">
+        <a href="{% url 'get_weather' 'Moscow' %}" class="get_button">Get weather for Moscow</a>
+        {% for weather in wther.msc %}
+
+            <div class="weather_info">
+                <ul>
+                    <li>id: {{ weather.id }}</li>
+                    <li>date: {{ weather.datetime }}</li>
+                    <li>temp: {{ weather.temp }}</li>
+                    <li>feels_like: {{ weather.feels_like }}</li>
+
+                </ul>
+            </div>
+
+        {% endfor %}
+    </div>
+    <div class="vladivostok">
+        <a href="{% url 'get_weather' 'Vladivostok' %}" class="get_button">Get weather for Vladivostok</a>
+        {% for weather in wther.vld %}
+
+        <div class="weather_info">
+            <ul>
+                <li>id: {{ weather.id }}</li>
+                <li>date: {{ weather.datetime }}</li>
+                <li>temp: {{ weather.temp }}</li>
+                <li>feels_like: {{ weather.feels_like }}</li>
+
+            </ul>
+        </div>
+
+    {% endfor %}              
+    </div>
+    <div class="stavropol">
+        <a href="{% url 'get_weather' 'Stavropol’' %}" class="get_button">Get weather for Stavropol'</a>
+        {% for weather in wther.stv %}
+
+        <div class="weather_info">
+            <ul>
+                <li>id: {{ weather.id }}</li>
+                <li>date: {{ weather.datetime }}</li>
+                <li>temp: {{ weather.temp }}</li>
+                <li>feels_like: {{ weather.feels_like }}</li>
+
+            </ul>
+        </div>
+
+    {% endfor %}
+    </div>
+{% endblock %}
