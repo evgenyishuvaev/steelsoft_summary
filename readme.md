@@ -60,7 +60,7 @@ then return current weather in choosen city.
 
     ./managa.py runserver
 ```
-
+This is all for run app for test. But if you need install app in server eou need also install nginx, gunicorn. And create systemd daemon.
 
 ## API Endpoints
 
@@ -79,5 +79,6 @@ then return current weather in choosen city.
 | ------------- |:------------------:|:-----:|:------:|:------:|
 | Admin         |          +         |   +   |    +   |    +   |
 | Forecaster    |          +         |   +   |   if owner  |    if owner   |
-| User          |          -         |   +   |    -   |    -   |
+| Anonymous User|          -         |   +   |    -   |    -   |
 
+Admin, Forcaster needed authenticate
