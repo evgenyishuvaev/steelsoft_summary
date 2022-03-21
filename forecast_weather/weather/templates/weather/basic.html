@@ -2,7 +2,7 @@
 
 {# Custom tags #}
 {% load weather_tags %}
-{% forecast_weather as wther%}
+{% forecast_weather request.user as wther%}
 
 
 <!DOCTYPE html>

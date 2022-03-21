@@ -34,15 +34,8 @@ then return current weather in choosen city.
 ```
     pip install -r requirements.txt
 ```
-5. For start project we need migrate all migrations
-```
-    ./manage.py migrate
-```
-6. After migrations, load data from city.json, this add information to City table about cities like lat, lon, for request weather from openweathermap.org API
-```
-    ./manage.py loaddata city.json
-```
-7. Project has two .env files, that stored sensitive data like API_KEY for openweathermap.org API and SECRET_KEY from django project, we need to edit their
+
+5. Project has two .env files, that stored sensitive data like API_KEY for openweathermap.org API and SECRET_KEY from django project, we need to edit their
 
     1. weather/services/.env.example, add your API_KEY and rename file to .env
     ```
@@ -53,6 +46,14 @@ then return current weather in choosen city.
     ```
         SECRET_KEY=<SECRET_KEY from project settings.py>
     ```
+6. For start project we need migrate all migrations
+```
+    ./manage.py migrate
+```
+7. After migrations, load data from city.json, this add information to City table about cities like lat, lon, for request weather from openweathermap.org API
+```
+    ./manage.py loaddata city.json
+```
 8. Now we can create superuser and run our web server.
 ```
     ./manage.py createsuperuser
@@ -81,4 +82,4 @@ This is all for run app for test. But if you need install app in server eou need
 | Forecaster    |          +         |   +   |   if owner  |    if owner   |
 | Anonymous User|          -         |   +   |    -   |    -   |
 
-Admin, Forcaster needed authenticate
+Admin, Forcaster is needed authenticate
